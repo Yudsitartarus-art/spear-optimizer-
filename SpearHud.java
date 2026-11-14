@@ -20,7 +20,7 @@ public final class SpearHud {
 
     static void extract(GuiGraphicsExtractor g, DeltaTracker deltaTracker) {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.player == null || mc.options.hideGui) return;
+        if (mc.player == null) return;
 
         SpearTracker t = SpearOptimizerClient.tracker();
         SpearTracker.ChargeState state = t.state();
