@@ -17,6 +17,7 @@ public class SpearOptimizerClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(TRACKER::tick);
+        SpearLungeSwap.init();
         HudElementRegistry.addLast(
                 Identifier.fromNamespaceAndPath(MOD_ID, "spear_hud"),
                 SpearHud::extract
